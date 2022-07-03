@@ -1,0 +1,45 @@
+/* justify-content --> ajustar horizontalmente X 
+    align-items --> alinhar na vertical Y
+    flex-direction: "coluna ou linha";
+
+*/
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap:wrap;
+
+    align-items: center;
+    align-content:flex-end;
+
+    height: 600px;
+    background-color: silver;
+
+    
+}
+
+.caixa{
+    width: 100px;
+    height: 100px;
+}
+
+.red{
+    align-self: center;
+    background-color: red;
+}
+
+.blue{
+    align-self: flex-end;
+    background-color: blue;
+}
+
+.yellow{
+    align-self: flex-start;
+    background-color: yellow;
+}
+
+.green{
+    align-self: center;
+    background-color: green;
+}

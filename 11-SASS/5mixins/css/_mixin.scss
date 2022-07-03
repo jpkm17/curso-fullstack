@@ -1,0 +1,6 @@
+
+@mixin resetList($margem: 0, $espacamento: 0, $estilo: none) {
+    margin: $margem;
+    padding: $espacamento;
+    list-style: $estilo;
+}

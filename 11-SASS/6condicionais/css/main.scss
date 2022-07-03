@@ -1,0 +1,69 @@
+@import 'variables';
+@import 'base';
+@import 'mixin';
+@import 'extends';
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    .box{
+        width: 30%;
+        color: black;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        
+
+        &.active{   
+            background-color: $colorSecundary;
+        }
+
+        h2{ 
+            font-family: $fontPrimary;
+            font-size: 22px;
+            margin: 10px 20px 30px 20px;
+        }
+
+        p{
+            font-family: $fontSecundary;
+            font-size: 18px;
+            
+            &.hidden{
+                display: none;
+            }
+        }
+
+        ul{
+            @include resetList;
+        }
+
+        a{
+            color: green;
+
+            &:hover{
+                color: yellow;
+
+                & + p.hidden{
+                    display: block;
+                }
+            }
+        }
+
+        .success{
+            @extend %boxAlert;  
+            @include bg-effect(success);
+        }
+
+        .danger{
+            @extend %boxAlert;
+            @include bg-effect(danger); 
+        }
+
+        .warning{
+            @extend %boxAlert;
+            @include bg-effect(warning);  
+        }
+
+    }
+
+}
