@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, p{
+    margin-bottom: 15px;
+}
+
+.header{
+    background-image: url(https://www.portofhalifax.ca/wp-content/uploads/2016/11/Port-Authority-Header-Background.jpg);
+    background-color: grey;
+    text-align: center;
+    font-size: 40px;
+    padding: 50px 0;
+}
+
+/* Toda vez que eu precisar colocar coisas lado a lado uso o display flex, mas para funcionar corretamente devo envolver as tags dentro de uma tag pai */
+.container{
+    display: flex;
+}
+
+.navbar{
+    width: 30%;
+    /* background: #a3a3a3; */
+    padding: 30px;
+}
+
+li{
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    background:rgb(112, 112, 243);
+    margin-bottom: 1px;
+    border-radius: 30%;
+    text-align: center;
+}
+
+.content{
+    width: 70%;
+    background: #d8d8d8;
+    padding: 30px;
+}
+
+.footer{
+    background-color: grey;
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+}
