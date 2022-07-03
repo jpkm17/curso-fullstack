@@ -1,0 +1,26 @@
+
+.menu{
+    position: absolute;
+    left:-100%;
+    top: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: black;
+    color: white;   
+    transition: all 800ms ease-in-out;
+}
+
+
+.menu.exibir{
+    left: 0;
+}
+
+.botaoMenu{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.botaoMenu:hover{
+    font-weight: bold;
+}

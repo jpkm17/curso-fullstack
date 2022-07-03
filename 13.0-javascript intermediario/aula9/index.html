@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form parte 1 - Validação de formulario </title>
+
+  <style>
+    div {
+      margin: 20px 0;
+    }
+
+    .erro {
+      color: red;
+    }
+
+    .inputError {
+      border: 1px solid red;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="formCadastro" action="gravarDados.html">
+    <div>
+      <label>
+        Nome
+        <input type="text" name="nome">
+        <span class="erro"></span>
+      </label>
+    </div>
+
+    <div>
+      <label>
+        Email
+        <input type="text" name="email">
+        <span class="erro"></span>
+      </label>
+    </div>
+
+    <div>
+      <label>
+        Cidade
+        <select name="cidade">
+          <option value="">-- Selecione --</option>
+          <option value="São Paulo">São Paulo</option>
+          <option value="Rio de Janeiro">Rio de Janeiro</option>
+          <option value="São Paulo">Belo Horizonte</option>
+        </select>
+        <span class="erro"></span>
+      </label>
+    </div>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

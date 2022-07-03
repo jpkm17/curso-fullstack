@@ -1,0 +1,26 @@
+AddEventListener
+{1ºparametro evento | 2ºparametro função anonima executavel}
+
+botaoTeste.addEventListener('click', function(){
+    console.log('mensagem function anonima')
+})
+////////////////////////////////////////////////////////////////////////////////
+
+botaoTeste.addEventListener('click', cliqueBotao)
+
+function cliqueBotao(){
+    console.log('mensagem, função reutilizavel')
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+function cliqueBotao(){
+    console.log('mensagem 1')
+
+
+    botaoTeste.removeEventListener('click', cliqueBotao)
+    //remover o evento de click do botaoTeste que executa a funcao cliqueBotao
+}
+
+botaoTeste.addEventListener('click', cliqueBotao)
