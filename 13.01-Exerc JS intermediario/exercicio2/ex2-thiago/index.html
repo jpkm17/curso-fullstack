@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador</title>
+
+  <style>
+    #counter {
+      font-size: 30px;
+    }
+    .active-green {
+      background-color: green;
+    }
+
+    .active-red {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="counter">0</div>
+  <button id="btn-decrease">-</button>
+  <button id="btn-increase">+</button>
+
+  <script>
+    let counter = 0
+
+    const counterHtml = document.querySelector('#counter')
+    const btnDecrease = document.querySelector('#btn-decrease')
+    const btnIncrease = document.querySelector('#btn-increase')
+
+    let increaseInterval
+    let decreaseInterval
+
+    btnDecrease.onclick = function() {
+      clearInterval(increaseInterval)
+
+      btnDecrease.classList.add('active-red')
+      btnIncrease.classList.remove('active-green')
+
+      decreaseInterval = setInterval(function() {
+        counter-- 
+        counterHtml.innerText = counter
+      }, 100)
+    }
+
+    btnIncrease.onclick = function(evento) {
+      clearInterval(decreaseInterval)
+
+      btnIncrease.classList.add('active-green')
+      btnDecrease.classList.remove('active-red')
+      
+      increaseInterval = setInterval(function() {
+        counter++ 
+        counterHtml.innerText = counter
+      }, 100)
+    }
+  </script>
+
+</body>
+</html>
