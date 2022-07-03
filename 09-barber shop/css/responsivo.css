@@ -1,0 +1,68 @@
+/* @media (min-width: 401px) and (max-width:600px){
+
+} */
+
+@media (max-width:800px){
+    
+
+    /* 
+    home
+     */
+
+    .home .header{
+        display: none;
+    }
+    
+    .home .banner .h1{
+        font-size: 2.5em;
+        left: 50%;
+        right: 50%;
+    }
+
+    .home .banner span{
+        font-size: 0.99em;
+    }
+
+
+    /* 
+    about 
+    */
+
+
+    div .experience{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experience img{
+        display: none;
+    }
+
+    /* 
+    services
+    */
+    .services .boxes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 
+    APPOINTMENT 
+    */
+    .appointment .personal-data {
+        display: flex;
+        flex-direction: column;
+    }   
+    
+    .appointment .personal-data input, 
+    .appointment .personal-data select,
+    .appointment textarea{
+        padding: 10px;
+        width: 90%;
+   
+    }
+
+}
+
+
+  
