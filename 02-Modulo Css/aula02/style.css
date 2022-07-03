@@ -1,0 +1,16 @@
+/* regra de css  --> seletor, propriedade, valor */
+/* | class-->. / id--># |*/
+/* Id vai ser mais utilizado quando eu for usar o javaScript */
+/* RGB = RED, GREEN, BLUE */
+/* Cor hexadecimal 2 primeiras letras= red, as outras 2 letras = green, o restante é o blue  */
+body{
+    background:#dddddd;
+}
+
+.foto{
+    width: 300px;
+}
+
+P{
+    color: #222222;
+}

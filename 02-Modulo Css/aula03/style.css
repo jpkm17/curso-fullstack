@@ -1,0 +1,18 @@
+/* regra de css  --> seletor, propriedade, valor */
+/* | class-->. / id--># |*/
+/* Id vai ser mais utilizado quando eu for usar o javaScript */
+/* RGB = RED, GREEN, BLUE */
+/* Cor hexadecimal 2 primeiras letras= red, as outras 2 letras = green, o restante é o blue  */
+/* url de background por padrão ja usa o comando repeat, para desabilitar use background-repeat: no-repeat; */
+body{
+    background-image:url(background.jpg);
+    background-repeat: no-repeat;
+    /* background-position: 100% 10% esqueda, direita; */
+    background-position:center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+p{
+    color: #222222;
+}

@@ -1,0 +1,19 @@
+/* regra de css  --> seletor, propriedade, valor */
+
+body{
+    background: rgb(177, 174, 174);
+}
+
+/* | class-->. / id--># |*/
+/* Id vai ser mais utilizado quando eu for usar o javaScript */
+.verde{
+    color: green;
+}
+
+.foto{
+    width: 200px;
+}
+
+#tituloPrincipal{
+    color: red;
+}
