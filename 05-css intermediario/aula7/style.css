@@ -1,0 +1,34 @@
+
+::selection{
+    color: rgb(102, 255, 0);
+    background:rgb(216, 216, 216);
+}
+
+h1::before{
+    background: url(http://simpleicon.com/wp-content/uploads/rocket.png);
+    background-size: cover;    
+    width: 25px;
+    height: 25px;
+    display:inline-block;
+    content: "";
+    margin-right: 10px;
+}
+
+h1::after{
+    background: url(http://simpleicon.com/wp-content/uploads/rocket.png);
+    background-size: cover;    
+    width: 25px;
+    height: 25px;
+    display:inline-block;
+    content: "";
+    margin-left: 10px;
+}
+
+p::first-line{
+    color: orange;
+}
+
+p::first-letter{
+    color: red;
+    font-size: 50px;
+}

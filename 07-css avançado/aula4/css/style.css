@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    font-size: 20px;
+}
+
+.box{
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(64, 197, 186);
+}
+
+.box2{
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(187, 0, 0);
+    font-size: 30px;
+    color:wheat;
+}
+
+.box p {
+    font-size: 1rem;
+}
+
+.box2 p{
+    font-size:2em;
+}

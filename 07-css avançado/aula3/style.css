@@ -1,0 +1,20 @@
+img{
+    /* filter:contrast(150%); */
+    /* filter: invert(100%); */
+}
+
+
+.guilherme{
+    filter: invert(100%);
+    /* filter: drop-shadow(8px 8px  10px red); */
+
+}
+
+.benio{
+    filter: contrast(600%);
+    width: 500px;
+    height: 250px;
+}
+.box{
+    filter: invert(4%);
+}

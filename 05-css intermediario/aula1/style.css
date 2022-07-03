@@ -1,0 +1,32 @@
+.exemplo{
+    border: 1px solid black;
+    padding: 20px;
+    margin:20px;
+}
+
+.exemplo1 p .red{
+    color: red;
+}
+
+.margin{
+    margin: 50px;
+}
+
+h1, h2, h3{
+    color: blue;
+}
+
+/* '>' filhos da tag */
+.exemplo2 > p{
+    color:blue;
+}
+
+/* '+'  primeiro irmão da tag */
+.exemplo3 + p{
+    color: red;
+}
+
+/* todos os irmãos */
+.exemplo4 ~ p{
+    color:green;
+}
