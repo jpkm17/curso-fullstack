@@ -13,7 +13,8 @@ const tarefas = [
 const tarefasJson = JSON.stringify(tarefas)
 
 //1º chave(key), valor(value)
-localStorage.setItem('tarefa', tarefasJson)
+localStorage.setItem('tarefas', tarefasJson)
+
 
 const listaTarefasSalvas = localStorage.getItem('tarefas')
 
