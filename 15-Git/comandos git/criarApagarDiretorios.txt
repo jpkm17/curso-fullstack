@@ -1,4 +1,0 @@
-(make directory)
-mkdir nomeDiretorio: cria o diretorio
-
-rmdir nomeDiretorio: apaga o diretorio
