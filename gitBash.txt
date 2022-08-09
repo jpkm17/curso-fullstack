@@ -1,0 +1,70 @@
+LISTAGEM DIRETORIOS 
+
+~ - home
+pwd - mostra o diretorio que estou
+clear ou "ctrl+L" - limpar tela
+
+**todos os comandos podem receber parametros**
+**ctrl+c: parar execução**
+**seta p/ cima: mostra os ultimos comandos que executei**
+
+ALGUNS COMANDOS COM LS
+ls: listar tudo que eu tenho no diretorio.
+
+ls --help: o help vai listar os comandos.
+
+ls -l: mostrar mais informações como: data de criação/alteração, permissoes, mostrar qtd de bytes que ocupa e etc
+.
+ls -l -s: mostra o tamanho dos arquivos em MB.
+
+ls -R: mostrar tudo que tem nas pastas dentro de home.
+
+ls -a: lista os arquivos + os arquivos com a inicial  "." (arquivos de config).
+
+**POSSO JUNTAR OS PARAMETROS**
+ex: separado(ls -l -a), junto(ls -la) 
+
+---------------------------------------------------------------------------------------
+
+NAVEGAR ENTRE OS DIRETORIOS
+
+(change directory)
+cd nomeDiretorio: muda/escolhe o diretorio
+
+./ --> meu diretorio atual
+../ --> diretorio anterior
+
+cd .. ou cd ../ : volta 1 diretorio 
+
+cd ~ : volta para o diretorio home
+
+ex: cd Documents + 2 tabs --> ele da um ls'
+
+---------------------------------------------------------------------------------------
+
+CRIAR OU APAGAR DIRETORIOS
+
+(make directory)
+mkdir nomeDiretorio: cria o diretorio
+
+rmdir nomeDiretorio: apaga o diretorio
+
+---------------------------------------------------------------------------------------
+
+CRIAR OU APAGAR arquivos
+
+touch: criar arquivo 
+ex: touch index.html
+
+rm: remover arquivo
+
+nano: editor de texto dentro do terminal (vamos usar para editar arquivos de configuração)
+
+mv nomeArquivo nomeDiretorio: mover o arquivo x para um diretorio x
+
+(por padrao o rmdir não apaga diretorios que não estão vazios, por questão de segurança)
+rm -rf nomeDiretorio: apaga o diretorio mesmo com arquivos dentro
+
+
+COMANDO PERIGOSO
+rm -rf / :apaga todos os arquivos e corrompe a maquina e a unica maneira de consertar é formatando
