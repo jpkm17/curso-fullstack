@@ -68,3 +68,91 @@ rm -rf nomeDiretorio: apaga o diretorio mesmo com arquivos dentro
 
 COMANDO PERIGOSO
 rm -rf / :apaga todos os arquivos e corrompe a maquina e a unica maneira de consertar é formatando
+
+---------------------------------------------------------------------------------------
+
+INICIANDO UM REPOSITORIO LOCAL
+
+(master) - branch(ramificação)
+git init: inicializa o git no repositorio
+git status: status do repositorio
+git add nomeArquivo: adiciona o arquivo ao stage
+git commit -m "Msg aqui": cria a mensagem do commit
+
+---------------------------------------------------------------------------------------
+
+Chaves de SSH
+
+*criar repositorio no github (o meu foi repositorio_teste)
+
+usar o seguinte comando no git bash: git remote add origin https://github.com/jpkm17/repositorio_teste.git
+
+*git log: log dos commits do repositorio
+
+git push origin master: fazer o push, mas ao fazer isso ele vai negar 
+(origin é a branch)
+
+pesquisar no google: github ssh keys
+na documentação do github copiar e colar no git Bash: ssh-keygen -t rsa -b 4096 -C "my_email@gmail.com"
+
+na documentação na parte "adding your ssh key to ssh-agent
+
+---------------------------------------------------------------------------------------
+
+Adicionando o git em um projeto existente (lista de tarefas)
+
+*criar repositorio no github
+dentro da repositorio digitar: git init, 
+git remote add origin 'url la do github', 
+git status, 
+git add . ,
+git commit -m "mensagem", 
+git push(se for a primeira vez copiar codigo que o git bash passar)
+
+---------------------------------------------------------------------------------------
+
+CLONANDO UM REPOSITORIO
+
+*no github dentro do repo ir em code, ssh e copiar o codigo
+git clone git@github.com:jpkm17/teste_repositorio.git
+
+mostrar alterações em um arquivo: git diff
+adicionar todos os arquivos com alterações: git add .
+
+---------------------------------------------------------------------------------------
+
+GIT PULL (atualizar repositorio local)
+
+git pull: verifica se tem alguma atualização no repo 
+  
+*antes de realizar o git push, sempre usar o git pull
+
+
+*merge: mescla as atualizações(a minha + outras pessoas)
+na tela do merge depois do git pull: crtl + c --> :qa --> enter
+
+---------------------------------------------------------------------------------------
+
+BRANCH
+
+*por padrao o git ao criar um repositorio, coloca duas branchs (main, master)
+
+git branch: lista a branchs criadas
+git checkout -b nomeDaBranch: cria um nova branch a partir de uma
+git push origin nomeDaBranch: faz o push nessa branch(versionamento)
+
+git checkout nomeDaBranch: troca de branch
+
+(dentro da branch master) git merge nomeDaBranch: trazer o conteudo de uma branch para a master
+
+git branch -D nomeDaBranch: apaga a branch LOCAL
+---------------------------------------------------------------------------------------
+
+GIT IGNORE
+
+*configurar o git para ignorar arquivos ou pastas*
+*criar arquivo .gitignore e dentro do arquivo colocar os arquivos ou pastas (ex: .env, node_modules, arquivo.js)
+
+
+
+
