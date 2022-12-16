@@ -18,12 +18,16 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 //rotas
 app.get('/', (req, res)=>{
-    res.render('index')
+    res.render('index',{
+        title: 'Digital tech - Home'
+    })
 })
 
 
 app.get('/posts', (req, res)=>{
-    res.render('posts')
+    res.render('posts', {
+        title: 'Digital Tech - Posts '
+    })
 })
 
 // 404 error (not found)
