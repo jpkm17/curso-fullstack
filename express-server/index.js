@@ -22,8 +22,8 @@ app.get('/', (req, res)=>{
 })
 
 
-app.get('/sobre', (req, res)=>{
-    res.send('Sobre')
+app.get('/posts', (req, res)=>{
+    res.render('posts')
 })
 
 // 404 error (not found)
