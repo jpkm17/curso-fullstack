@@ -1,26 +1,24 @@
-const exp = require('constants')
 const express = require('express')
 const path = require('path')
 const app = express()
-//MVC - MODEL(lidar com coisas do banco de dados) VIEW(vizualização, html etc) CONTROLER(responsavel por gerenciar os dados)
-//console.log(__dirname)
 
-/*  Definindo os arquivos estaticos  */
-// Aqui definimos qual é a pasta dos arquivos estaticos
-const staticFolder = path.join(__dirname, 'views')
-// Aqui passamos qual é pasta de arquivos estaticos
-const expressStatic =  express.static(staticFolder)
-app.use(expressStatic)
+// definindo o template engine
+app.set('view engine', 'ejs')
+// set: configurar,setar
 
+/* 
+  definindo os arquivos estaticos
+app.use(express.static(path.join(__dirname, 'view')))
+ só vou usar isso se eu não usar o template engine
+*/
 
 /*  Definindo os arquivos publicos  */
 app.use(express.static(path.join(__dirname, 'public')))
-// Maneira comum
 
 
 //rotas
 app.get('/', (req, res)=>{
-    res.render('views/index')
+    res.render('index')
 })
 
 
