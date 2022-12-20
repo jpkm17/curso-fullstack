@@ -28,18 +28,18 @@ app.get('/posts', (req, res)=>{
     res.render('posts', {
         title: 'Digital Tech - Posts',
         posts: [
-            {
-                title: 'Novidade no mundo da tecnologia', 
-                text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
-            },
-            {
-                title: 'Criando um servidor com node.js', 
-                text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
-            },
-            {
-                title: 'Javascript é a linguagem mais utilizada no mundo', 
-                text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
-            }
+                {
+                    title: 'Novidade no mundo da tecnologia', 
+                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
+                },
+                {
+                    title: 'Criando um servidor com node.js', 
+                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
+                },
+                {
+                    title: 'Javascript é a linguagem mais utilizada no mundo', 
+                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
+                }
         ]
     })
 })
