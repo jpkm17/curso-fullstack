@@ -11,14 +11,21 @@
         <article class="content">
             <h1>POSTS</h1>
 
-                <div class="posts">
-                    <% posts.forEach((item)=>{  %>
-                        <div class="post">
-                            <h3> <%= item.title %> </h3>
-                            <p> <%= item.text %> </p>
-                        </div>
-                    <% }) %>
-                </div>
+            <div class="posts">
+                <% posts.forEach((item)=>{  %>
+                    <div class="post">
+                        <h3> <%= item.title %> </h3>
+                        <p> <%= item.text %> </p>
+                        <% if (item.stars){ %>
+
+                            <% for( let index = 0; index < item.stars; index++ ){ %>
+                                <img src="https://cdn-icons-png.flaticon.com/512/686/686384.png" width="18px">
+                            <% } %> 
+                            
+                        <% } %> 
+                    </div>
+                <% }) %>
+            </div>
         </article>
     </section>
 
