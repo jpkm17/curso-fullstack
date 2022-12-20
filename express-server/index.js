@@ -19,14 +19,28 @@ app.use(express.static(path.join(__dirname, 'public')))
 //rotas
 app.get('/', (req, res)=>{
     res.render('index',{
-        title: 'Digital tech - Home'
+        title: 'Digital tech - Home',
     })
 })
 
 
 app.get('/posts', (req, res)=>{
     res.render('posts', {
-        title: 'Digital Tech - Posts '
+        title: 'Digital Tech - Posts',
+        posts: [
+            {
+                title: 'Novidade no mundo da tecnologia', 
+                text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
+            },
+            {
+                title: 'Criando um servidor com node.js', 
+                text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
+            },
+            {
+                title: 'Javascript é a linguagem mais utilizada no mundo', 
+                text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.'
+            }
+        ]
     })
 })
 
