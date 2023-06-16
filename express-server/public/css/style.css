@@ -14,7 +14,7 @@
   }
   
   .header {
-    background-image: url(https://www.portofhalifax.ca/wp-content/uploads/2016/11/Port-Authority-Header-Background.jpg);
+    background-image: url('https://img.freepik.com/fotos-premium/predios-da-cidade-na-area-metropolitana_31965-7268.jpg?w=2000');
     background-size: cover;
     color: white;
     text-align: center;
@@ -63,7 +63,7 @@
   }
   
   .footer {
-    position: absolute;
+    position: static;
     bottom: 0;
     left: 0;
     width: 100%;

@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-   <%- include('partials/head.ejs')%>
+    <%- include('partials/head.ejs') %>
 </head>
 <body>
     <%- include('partials/header.ejs') %>
-
     <section class="container">
-        <%- include('partials/navBar.ejs')%>
+        <%- include('partials/navbar.ejs') %>
+    
+
         <article class="content">
-            <h1>POSTS</h1>
+            <h1>Posts</h1>
 
             <div class="posts">
-                <% posts.forEach((item)=>{  %>
+                <% posts.forEach((item)=>{ %>
                     <div class="post">
-                        <h3> <%= item.title %> </h3>
-                        <p> <%= item.text %> </p>
-                        <% if (item.stars){ %>
+                        <h3><%= item.title %></h3>
+                        <p><%= item.text %></p>
 
-                            <% for( let index = 0; index < item.stars; index++ ){ %>
-                                <img src="https://cdn-icons-png.flaticon.com/512/686/686384.png" width="18px">
-                            <% } %> 
+                        <% if(item.stars){ %>
+                            <% for(let index = 0; index < item.stars; index++) { %>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Star_icon_stylized.svg/1200px-Star_icon_stylized.svg.png" width="20px">
                             
-                        <% } %> 
+                            <% } %>
+                        <% }%>
                     </div>
                 <% }) %>
             </div>
         </article>
     </section>
-
-    <%- include('partials/footer.ejs')%>
+    
+    <%- include('partials/footer.ejs') %>
     <%- include('partials/foot.ejs') %>
 </body>
 </html>

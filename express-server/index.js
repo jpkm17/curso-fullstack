@@ -1,58 +1,46 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const fs = require('fs')
 
-// definindo o template engine
+//definindo o template engine
 app.set('view engine', 'ejs')
-// set: configurar,setar
 
-/* 
-  definindo os arquivos estaticos
-app.use(express.static(path.join(__dirname, 'view')))
- só vou usar isso se eu não usar o template engine
-*/
+//definindo os arquivos estaticos
+//app.use(express.static(path.join(__dirname, 'views')))
 
-/*  Definindo os arquivos publicos  */
+//definindo os arquivos publicos
 app.use(express.static(path.join(__dirname, 'public')))
 
 
+const postsJson = path.join(__dirname, 'posts.json')
+
 //rotas
-app.get('/', (req, res)=>{
-    res.render('index',{
-        title: 'Digital tech - Home',
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: "Digital Tech - Home"
     })
 })
 
-
-app.get('/posts', (req, res)=>{
-    res.render('posts', {
-        title: 'Digital Tech - Posts',
-        posts: [
-                {
-                    title: 'Novidade no mundo da tecnologia', 
-                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.',
-                    stars: 3
-                },
-                {
-                    title: 'Criando um servidor com node.js', 
-                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.',
-                    stars: 4
-                },
-                {
-                    title: 'Javascript é a linguagem mais utilizada no mundo', 
-                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, ab vitae provident voluptate error optio vero! Nostrum, placeat ratione in accusantium doloremque voluptatum est temporibus delectus minima, praesentium, quae vitae.', 
-                    stars: 5
-                }
-        ]
+app.get('/posts', (req, res) => {
+    fs.readFile(postsJson, (err, content) => {
+        const postsContent = JSON.parse(content)
+        res.render("posts", {
+            title: "Digital tech - Posts",
+            posts: postsContent
+        })
     })
+
 })
 
-// 404 error (not found)
-app.use((req, res)=>{ // middleware
-    res.send('pagina não encontrada')
+
+//404 error (not found)
+app.use((req, res) => {
+    res.send('Pagina não encontrada')
 })
 
 
 //executando o servidor
 const port = process.env.PORT || 8080
-app.listen(port, ()=> console.log(`Server is listen on port ${port}`))
+app.listen(port, () => console.log(`Server is listening on port ${port}`))
+console.log('http://localhost:8080/')
