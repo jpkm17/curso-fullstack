@@ -1,0 +1,9 @@
+.header {
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+
+.header h1, .header h2 {
+    margin: 0;
+}
